@@ -23,4 +23,4 @@ Este repositório contém um projeto desenvolvido enquanto pessoa estudante da T
 
 ### Link para acessar o projeto
 
-_[https://raugusto96.github.io/trybe-wallet/](https://raugusto96.github.io/trybe-wallet/)_
+_[https://trybe-wallet-raugusto96.vercel.app/](https://trybe-wallet-raugusto96.vercel.app/)_
