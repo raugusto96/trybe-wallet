@@ -7,7 +7,8 @@ import './login.css';
 import wallet from '../images/wallet.png';
 
 const initialState = {
-  buttonDisabled: true,
+  validateEmail: false,
+  validatePassword: false,
   email: '',
   password: '',
   logged: false,
@@ -17,24 +18,32 @@ class Login extends React.Component {
     super();
     this.state = initialState;
 
-    this.handleChange = this.handleChange.bind(this);
-    this.enableButton = this.enableButton.bind(this);
+    this.validatePassword = this.validatePassword.bind(this);
+    this.validateEmail = this.validateEmail.bind(this);
     this.redirectOnClick = this.redirectOnClick.bind(this);
     this.toggleLoginState = this.toggleLoginState.bind(this);
   }
 
-  handleChange({ target }) {
-    const { value, name } = target;
-    this.setState({ [name]: value });
-    this.enableButton();
+  validateEmail({ target: { name, value } }) {
+    this.setState({
+      [name]: value,
+    }, () => {
+      const { email } = this.state;
+      const emailIsValid = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/i;
+      const enable = emailIsValid.test(email);
+      this.setState({ validateEmail: enable });
+    });
   }
 
-  enableButton() {
-    const { email, password } = this.state;
-    const passwordMinLength = 5;
-    const emailIsValid = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/i;
-    const enable = emailIsValid.test(email) && password.length >= passwordMinLength;
-    this.setState({ buttonDisabled: !enable });
+  validatePassword({ target: { name, value } }) {
+    this.setState({
+      [name]: value,
+    }, () => {
+      const { password } = this.state;
+      const passwordMinLength = 5;
+      const enable = password.length > passwordMinLength;
+      this.setState({ validatePassword: enable });
+    });
   }
 
   toggleLoginState() {
@@ -53,7 +62,7 @@ class Login extends React.Component {
   }
 
   render() {
-    const { buttonDisabled, email, password } = this.state;
+    const { validateEmail, validatePassword, email, password } = this.state;
     return (
       <div className="App">
         <form className="lgn">
@@ -67,14 +76,14 @@ class Login extends React.Component {
               placeholder="email@example.com"
               dataTest="email-input"
               value={ email }
-              onChange={ this.handleChange }
+              onChange={ this.validateEmail }
             />
           </div>
           <div className="password-container row">
             <Label
               className="clean"
               text="Senha"
-              onChange={ this.handleChange }
+              onChange={ this.validatePassword }
               value={ password }
               type="password"
               name="password"
@@ -84,7 +93,7 @@ class Login extends React.Component {
           <div className="buttons-container">
             <button
               type="button"
-              disabled={ buttonDisabled }
+              disabled={ !(validateEmail && validatePassword) }
               onClick={ this.redirectOnClick }
             >
               Entrar
