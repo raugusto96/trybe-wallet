@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Label from '../components/Label';
-import { login as userLogin } from '../actions';
+import { login as userLogin } from '../redux/actions';
 import './login.css';
 import wallet from '../images/wallet.png';
 

@@ -5,7 +5,7 @@ import Label from '../Label';
 import {
   fetchCurrencies as fetchCurrenciesThunk,
   saveExpenses,
-} from '../../actions';
+} from '../../redux/actions';
 import payforms from '../../data/payformData';
 import tags from '../../data/tagsData';
 

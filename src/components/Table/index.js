@@ -6,7 +6,7 @@ import { AiFillCloseCircle } from 'react-icons/ai';
 
 import {
   removeItem as removeItemAction,
-} from '../../actions';
+} from '../../redux/actions';
 
 import './index.css';
 

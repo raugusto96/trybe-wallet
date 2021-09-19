@@ -1,6 +1,6 @@
 // Coloque aqui suas actions
 
-import fetchURL from '../services';
+import fetchURL from '../../services';
 
 export const LOGIN = 'LOGIN';
 
