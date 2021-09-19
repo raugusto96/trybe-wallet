@@ -1,0 +1,52 @@
+.table {
+  align-items: center;
+  color: white;
+  font-size: medium;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.table tr:nth-child( even ) {
+  background-color: rgb(46, 179, 75);
+  color: black;
+  padding: 10px;
+}
+
+.table tr:nth-child( odd ) {
+  background-color: rgb(34, 34, 34);
+  color: white;
+  padding: 10px;
+}
+
+.table th {
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+
+.table button {
+  background: none;
+  border: 5px black;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 3px 8px;
+  text-transform: uppercase;
+  transition: all 0.5s ease-out;
+  transition-property: background-color, color;
+}
+
+.table tr:nth-child( even ) button {
+  color: black;
+}
+
+.table tr:nth-child( odd ) button {
+  color: white;
+}
+
+.table .button-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

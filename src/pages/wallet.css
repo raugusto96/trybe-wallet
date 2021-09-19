@@ -1,0 +1,228 @@
+.wallet-main-container {
+  background: linear-gradient(120deg, rgb(30, 134, 52) 0%, rgba(10, 82, 11, 1) 100%);
+  height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.header {
+  align-items: center;
+  background-color: rgb(56, 56, 56);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.title-container {
+  align-items: center;
+  display: flex;
+  text-transform: uppercase;
+}
+
+.header-title > span {
+  color: rgb(32, 175, 63);
+}
+
+.header .wallet {
+  margin-left: 50px;
+  margin-right: 20px;
+  width: 50px;
+}
+
+.header .exit-button {
+  align-items: center;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: x-large;
+  margin-left: 10px;
+}
+
+.wallet-container {
+  display: flex;
+  font-size: large;
+  justify-content: space-around;
+  margin-right: 50px;
+  padding: 10px;
+}
+
+.wallet-container .wallet-email {
+  align-items: center;
+  display: flex;
+  margin-right: 20px;
+}
+
+.wallet-container .wallet-email .user-email {
+  margin-left: 10px;
+}
+
+.wallet-container .wallet-funds {
+  align-items: center;
+  display: flex;
+}
+
+.wallet-container .wallet-funds .user-funds {
+  margin-left: 10px;
+}
+
+.wallet-container .wallet-funds .funds-icon {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.logout p , .logout span {
+  margin-bottom: 5px;
+}
+
+.form {
+  align-items: center;
+  background-color: rgb(34, 34, 34);
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.form .row {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.form .row span {
+  display: inline-block;
+  position: relative;
+}
+
+.form .clean {
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  color: black;
+  display: inline-block;
+  font-weight: 400;
+  outline: 0;
+  padding: 10px 0 10px 15px;
+  position: relative;
+  text-indent: 60px;
+  transition: all 0.3s ease-in-out;
+  width: 190px;
+}
+
+.form .clean::-moz-input-placeholder {
+  color: #efefef;
+  font-weight: 300;
+  padding-left: 5px;
+  text-indent: 0;
+}
+
+.form .clean + label {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  bottom: 0;
+  color: #28ac49;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  left: 0;
+  overflow: hidden;
+  padding: 13px 15px;
+  position: absolute;
+  text-align: left;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  top: -3px;
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out, color 0.3s ease-out;
+}
+
+.form .clean + label:after {
+  background: #7ab893;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  bottom: 0;
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 3px;
+  transform: translate(0);
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  z-index: -1;
+}
+
+.form .clean:focus , .form .clean:active {
+  background: white;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  color: #377d6a;
+  text-indent: 0;
+}
+
+.form .clean:focus::-moz-input-placeholder , .form .clean:active::-moz-input-placeholder {
+  color: black;
+}
+
+.form .clean:focus + label , .form .clean:active + label {
+  color: white;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+  transform: translateX(-100%);
+}
+
+.form .clean:focus + label:after , .form .clean:active + label:after {
+  transform: translate(100%);
+}
+
+.form button {
+  background-color: rgb(31, 141, 55);
+  border: 5px black;
+  color: black;
+  cursor: pointer;
+  font-size: 15px;
+  margin-right: 10px;
+  padding: 13px 15px;
+  transition: all 0.5s ease-out;
+  transition-property: background-color, color;
+}
+
+.form select {
+  color: #377d6a;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 8px 10px;
+}
+
+.form .select-currency , .form .select-tag , .form .select-method {
+  color: rgb(32, 175, 63);
+  position: relative;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.wallet-main-container-logout {
+  align-items: center;
+  background: linear-gradient(120deg, rgb(30, 134, 52) 0%, rgba(10, 82, 11, 1) 100%);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.logout {
+  align-items: center;
+  background-color: white;
+  color: rgb(32, 175, 63);
+  display: flex;
+  flex-direction: column;
+  font-size: xx-large;
+  justify-content: center;
+  min-height: 10vh;
+  min-width: 30vw;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  transition: box-shadow 1s ease-out;
+}

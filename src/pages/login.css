@@ -1,0 +1,152 @@
+.lgn {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 40vh;
+  min-width: 25vw;
+  text-align: center;
+  transition: box-shadow 1s ease-out;
+}
+
+.lgn:hover {
+  box-shadow: 7px 7px 15px rgba(5, 54, 6, 1);
+}
+
+.lgn .email-container {
+  font-size: large;
+  padding: 5px;
+}
+
+.lgn .password-container {
+  font-size: large;
+  padding: 5px;
+}
+
+.lgn button {
+  background-color: rgb(31, 141, 55);
+  border: 5px black;
+  color: black;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: all 0.5s ease-out;
+  transition-property: background-color, color;
+}
+
+.lgn button:disabled {
+  background-color: rgb(43, 43, 43);
+  border: 5px black;
+  color: white;
+  cursor: not-allowed;
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.lgn .wallet {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  rotate: -8deg;
+  width: 100px;
+}
+
+.lgn .row {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 15px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.lgn .row span {
+  display: inline-block;
+  position: relative;
+}
+
+.lgn .clean {
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  color: black;
+  display: inline-block;
+  font-weight: 400;
+  outline: 0;
+  padding: 10px 0 10px 15px;
+  position: relative;
+  text-indent: 60px;
+  transition: all 0.3s ease-in-out;
+  width: 190px;
+}
+
+.lgn .clean::-moz-input-placeholder {
+  color: #efefef;
+  font-weight: 300;
+  text-indent: 0;
+}
+
+.lgn .clean + label {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  bottom: 0;
+  color: #28ac49;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  left: 0;
+  overflow: hidden;
+  padding: 13px 15px;
+  position: absolute;
+  text-align: left;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  top: 0;
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out, color 0.3s ease-out;
+}
+
+.lgn .clean + label:after {
+  background: #7ab893;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  bottom: 0;
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 0;
+  transform: translate(0);
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  z-index: -1;
+}
+
+.lgn .clean:focus , .lgn .clean:active {
+  background: white;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  color: #377d6a;
+  text-indent: 0;
+}
+
+.lgn .clean:focus::-moz-input-placeholder , .lgn .clean:active::-moz-input-placeholder {
+  color: black;
+}
+
+.lgn .clean:focus + label , .lgn .clean:active + label {
+  color: white;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+  transform: translateX(-100%);
+}
+
+.lgn .clean:focus + label:after , .lgn .clean:active + label:after {
+  transform: translate(100%);
+}
